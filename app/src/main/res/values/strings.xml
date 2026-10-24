@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClipMark</string>
+    <string name="share_target_label">Watermark with ClipMark</string>
+
+    <!-- Home -->
+    <string name="home_tagline">Add your watermark</string>
+    <string name="home_ready_label">READY TO GO</string>
+    <string name="adjust_preset">Adjust</string>
+    <string name="quick_watermark">Quick Watermark</string>
+    <string name="home_quick_caption">Pick photos — they\'re saved right away with “%1$s”</string>
+    <string name="home_quick_busy">Finishing the current batch first…</string>
+    <string name="select_and_preview">Select &amp; preview</string>
+    <string name="presets_title">Presets</string>
+    <string name="manage">Manage</string>
+    <string name="preset_new">New preset</string>
+    <string name="recent_title">Recent</string>
+    <string name="see_all">See all</string>
+    <string name="recent_empty">Watermarked batches will show up here. Only counts are kept — never copies of your photos.</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="privacy_footer">On-device only · originals are never changed</string>
+    <string name="batch_banner_tap">Tap to view, share or open</string>
+
+    <!-- Positions -->
+    <string name="anchor_top_left">Top left</string>
+    <string name="anchor_top_center">Top center</string>
+    <string name="anchor_top_right">Top right</string>
+    <string name="anchor_center_left">Center left</string>
+    <string name="anchor_center">Center</string>
+    <string name="anchor_center_right">Center right</string>
+    <string name="anchor_bottom_left">Bottom left</string>
+    <string name="anchor_bottom_center">Bottom center</string>
+    <string name="anchor_bottom_right">Bottom right</string>
+    <string name="position_custom">Custom position</string>
+    <string name="position_smart">Smart corner</string>
+
+    <string name="size_xs">XS</string>
+    <string name="size_s">Small</string>
+    <string name="size_m">Medium</string>
+    <string name="size_l">Large</string>
+
+    <!-- Editor -->
+    <string name="editor_title">Preview</string>
+    <string name="editor_title_preset">Edit preset</string>
+    <string name="editor_title_new_preset">New preset</string>
+    <string name="photo_x_of_y">Photo %1$d of %2$d</string>
+    <string name="show_original">Show original</string>
+    <string name="original_label">Original</string>
+    <string name="a11y_preview">Watermark preview. Drag the watermark to move it; press and hold elsewhere to see the original.</string>
+    <string name="a11y_selected">Selected</string>
+    <string name="a11y_smart_pick">Chosen by Smart Corner</string>
+    <string name="a11y_custom_adjusted">Adjusted individually</string>
+    <string name="preview_failed_hint">This photo will be skipped; the others are fine.</string>
+    <string name="choose_preset">Choose preset</string>
+    <string name="preset_edited">%1$s (edited)</string>
+    <string name="preset_update">Update “%1$s”</string>
+    <string name="preset_save_as_new">Save as new preset…</string>
+    <string name="preset_save_as_new_short">Save as new</string>
+    <string name="preset_revert">Revert changes</string>
+    <string name="preset_save">Save preset</string>
+    <string name="preset_create">Name &amp; create preset</string>
+    <string name="preset_name_title">Name this preset</string>
+    <string name="preset_name_label">Preset name</string>
+    <string name="preset_copy_name">%1$s variant</string>
+    <string name="msg_preset_updated">Preset updated</string>
+    <string name="msg_preset_created">Saved preset “%1$s”</string>
+    <string name="msg_overrides_cleared">Individual adjustments cleared — every photo now matches</string>
+    <string name="tab_position">Position</string>
+    <string name="tab_style">Style</string>
+    <string name="tab_readability">Readability</string>
+    <string name="lock_all_on">Every photo gets identical branding</string>
+    <string name="lock_all_off">Edits apply only to the photo you\'re viewing</string>
+    <string name="margin_side">Side margin</string>
+    <string name="margin_vertical">Top/bottom margin</string>
+    <string name="custom_position_reset">Custom position · tap to snap back</string>
+    <string name="smart_corner">Smart Corner</string>
+    <string name="smart_corner_desc">Picks the calmest corner of each photo so the mark avoids faces and detail. Only the position changes.</string>
+    <string name="drag_hint">Tip: drag the watermark on the preview. It snaps to the nine positions and the center lines.</string>
+    <string name="watermark_text">Watermark text</string>
+    <string name="error_empty_text">Watermark text can\'t be empty</string>
+    <string name="reset_text">Reset to @animecliplabs</string>
+    <string name="size">Size</string>
+    <string name="size_fine">Fine-tune (% of short edge)</string>
+    <string name="font">Font</string>
+    <string name="font_clean">Clean</string>
+    <string name="font_medium">Medium</string>
+    <string name="font_condensed">Condensed</string>
+    <string name="font_serif">Serif</string>
+    <string name="font_mono">Mono</string>
+    <string name="font_script">Script</string>
+    <string name="font_casual">Casual</string>
+    <string name="bold">Bold</string>
+    <string name="color">Color</string>
+    <string name="color_white">White</string>
+    <string name="color_black">Black</string>
+    <string name="color_ivory">Ivory</string>
+    <string name="color_gray">Gray</string>
+    <string name="color_gold">Gold</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_lavender">Lavender</string>
+    <string name="color_sky">Sky blue</string>
+    <string name="opacity">Opacity</string>
+    <string name="shadow">Soft shadow</string>
+    <string name="shadow_desc">A gentle drop shadow that lifts the text off busy art</string>
+    <string name="outline">Outline</string>
+    <string name="outline_desc">A thin contrasting edge around each letter</string>
+    <string name="contrast_assist">Contrast Assist</string>
+    <string name="contrast_assist_desc">Adds a shadow or outline automatically, only where the background would swallow the text</string>
+    <string name="assist_active">Assist is adding contrast on this photo</string>
+    <string name="assist_idle">Readable as is — no help needed here</string>
+
+    <!-- Batch -->
+    <string name="batch_processing_count">Watermarking %1$d of %2$d</string>
+    <string name="batch_with_preset">Using “%1$s”</string>
+    <string name="batch_leave_hint">You can leave the app — this keeps going and you\'ll be notified when it\'s done.</string>
+    <string name="batch_done_title">Watermarked ✓</string>
+    <string name="batch_cancelled_title">Stopped</string>
+    <string name="batch_none_saved">Nothing was saved</string>
+    <string name="batch_paused_title">Batch paused</string>
+    <string name="batch_paused_body">%1$d saved, %2$d still to do. Already-saved photos won\'t be done twice.</string>
+    <string name="batch_busy">A batch is still running — wait for it to finish.</string>
+    <string name="batch_empty">No batch right now.</string>
+    <string name="open">Open</string>
+    <string name="process_more">Process more</string>
+    <string name="done">Done</string>
+    <string name="resume">Resume</string>
+    <string name="discard">Discard</string>
+    <string name="unnamed_photo">Unnamed photo</string>
+    <string name="skipped_storage">skipped, storage full</string>
+    <string name="skipped_cancelled">not processed (stopped)</string>
+    <string name="and_n_more">…and %1$d more</string>
+    <string name="note_downscaled">A very large photo was saved at a reduced size because the device ran low on memory.</string>
+    <string name="note_metadata">Some photos were saved without their camera info (their metadata could not be copied).</string>
+    <string name="note_shrunk">On very small photos the watermark was shrunk to stay inside the safe margins.</string>
+    <string name="fail_unreadable">the file is damaged or incomplete</string>
+    <string name="fail_unsupported">this format isn\'t supported</string>
+    <string name="fail_access">access expired — select it again</string>
+    <string name="fail_not_found">the original was moved or deleted</string>
+    <string name="fail_too_large">too large for this device\'s memory</string>
+    <string name="fail_storage">not enough storage space</string>
+    <string name="fail_write">couldn\'t be written to the gallery</string>
+    <string name="fail_unknown">something unexpected went wrong</string>
+
+    <!-- Presets -->
+    <string name="preset_use">Use</string>
+    <string name="preset_active">Active preset</string>
+    <string name="preset_active_hint">In use — Quick Watermark applies this</string>
+    <string name="preset_rename">Rename</string>
+    <string name="preset_duplicate">Duplicate</string>
+    <string name="preset_delete_title">Delete “%1$s”?</string>
+    <string name="preset_delete_body">Photos you already watermarked are not affected.</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="more_options">More options</string>
+
+    <!-- History -->
+    <string name="history_title">History</string>
+    <string name="history_empty_title">No batches yet</string>
+    <string name="history_clear_title">Clear history</string>
+    <string name="history_clear_body">This clears the list only. Your watermarked photos stay in the gallery.</string>
+    <string name="clear">Clear</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_output">Output</string>
+    <string name="format_match">Match original (recommended)</string>
+    <string name="format_match_desc">JPEG stays JPEG, PNG stays PNG (lossless), WebP stays WebP</string>
+    <string name="format_jpeg">Always JPEG</string>
+    <string name="format_jpeg_desc">Smallest files. Transparent images still use PNG.</string>
+    <string name="format_png">Always PNG</string>
+    <string name="format_png_desc">Lossless, larger files</string>
+    <string name="quality">JPEG / WebP quality</string>
+    <string name="quality_desc">Re-encoding is unavoidable for these formats; “High” is visually identical.</string>
+    <string name="quality_high">High (95)</string>
+    <string name="quality_max">Maximum (100)</string>
+    <string name="settings_metadata">Photo info</string>
+    <string name="keep_metadata">Keep camera info &amp; dates</string>
+    <string name="keep_metadata_desc">Copies capture date, camera and lens details to the watermarked copy</string>
+    <string name="strip_location">Remove location</string>
+    <string name="strip_location_desc">Never copy GPS coordinates into photos you\'ll post publicly</string>
+    <string name="settings_about">About</string>
+    <string name="save_location">Saved to</string>
+    <string name="privacy_title">Private by design</string>
+    <string name="privacy_body">Everything happens on this phone. No uploads, no account, no analytics.</string>
+    <string name="version">Version %1$s</string>
+
+    <!-- Shared -->
+    <string name="back">Back</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="share_title">Share watermarked photos</string>
+    <string name="error_no_app">No app available for this</string>
+    <string name="action_cancel">Cancel</string>
+
+    <!-- Notifications -->
+    <string name="channel_progress">Batch progress</string>
+    <string name="channel_progress_desc">Shows progress while photos are being watermarked</string>
+    <string name="channel_done">Batch finished</string>
+    <string name="channel_done_desc">Lets you know when a batch is ready to share</string>
+    <string name="notif_progress_title">Watermarking %1$d of %2$d</string>
+    <string name="notif_progress_starting">Getting ready…</string>
+    <string name="notif_progress_text">Originals stay untouched</string>
+    <string name="notif_done_cancelled">Stopped — %1$d saved</string>
+    <string name="notif_done_text">Tap to share or open</string>
+
+    <plurals name="notif_done">
+        <item quantity="one">%1$d photo watermarked</item>
+        <item quantity="other">%1$d photos watermarked</item>
+    </plurals>
+    <plurals name="notif_done_with_failures">
+        <item quantity="one">%1$d photo watermarked, %2$d failed</item>
+        <item quantity="other">%1$d photos watermarked, %2$d failed</item>
+    </plurals>
+    <plurals name="images_watermarked">
+        <item quantity="one">%1$d image watermarked</item>
+        <item quantity="other">%1$d images watermarked</item>
+    </plurals>
+    <plurals name="photos_saved">
+        <item quantity="one">%1$d photo saved</item>
+        <item quantity="other">%1$d photos saved</item>
+    </plurals>
+    <plurals name="photos_saved_to">
+        <item quantity="one">%1$d photo saved to %2$s</item>
+        <item quantity="other">%1$d photos saved to %2$s</item>
+    </plurals>
+    <plurals name="photos_failed">
+        <item quantity="one">%1$d failed</item>
+        <item quantity="other">%1$d failed</item>
+    </plurals>
+    <plurals name="photos_not_saved">
+        <item quantity="one">%1$d photo wasn\'t saved</item>
+        <item quantity="other">%1$d photos weren\'t saved</item>
+    </plurals>
+    <plurals name="retry_n">
+        <item quantity="one">Retry %1$d</item>
+        <item quantity="other">Retry %1$d</item>
+    </plurals>
+    <plurals name="save_photos">
+        <item quantity="one">Save photo</item>
+        <item quantity="other">Save %1$d photos</item>
+    </plurals>
+    <plurals name="share_n">
+        <item quantity="one">Share</item>
+        <item quantity="other">Share all %1$d</item>
+    </plurals>
+    <plurals name="lock_all_title">
+        <item quantity="one">Same watermark on %1$d photo</item>
+        <item quantity="other">Same watermark on all %1$d</item>
+    </plurals>
+</resources>
