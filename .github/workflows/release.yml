@@ -1,0 +1,96 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  publish-release:
+    name: Build & Publish Release
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Accept Android SDK licenses
+        run: |
+          yes | sdkmanager --licenses || true
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Run Unit Tests
+        run: ./gradlew testDebugUnitTest --no-daemon --stacktrace
+
+      - name: Assemble Release APK
+        run: ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Prepare Release Artifacts
+        id: prepare_artifacts
+        run: |
+          TAG_NAME="${GITHUB_REF_NAME}"
+          DIST_DIR="build/dist"
+          mkdir -p "${DIST_DIR}"
+
+          APK_SOURCE="app/build/outputs/apk/release/app-release.apk"
+          APK_TARGET="${DIST_DIR}/clipmark-${TAG_NAME}.apk"
+
+          if [ ! -f "${APK_SOURCE}" ]; then
+            echo "Error: Release APK not found at ${APK_SOURCE}"
+            exit 1
+          fi
+
+          cp "${APK_SOURCE}" "${APK_TARGET}"
+
+          # Compute SHA-256 checksum
+          cd "${DIST_DIR}"
+          sha256sum "clipmark-${TAG_NAME}.apk" > checksums.txt
+          cd - > /dev/null
+
+          # Prepare release notes
+          cat <<EOF > release-notes.md
+          ## ClipMark ${TAG_NAME}
+
+          ClipMark is an offline, privacy-first Android application designed for high-throughput batch watermarking.
+
+          ### Key Features
+          - **Batch Watermarking**: Process dozens or hundreds of high-resolution images in the background with AndroidX WorkManager.
+          - **Smart Corner & Readability**: Automatic positioning and contrast analysis to avoid covering subjects.
+          - **Metadata Preservation**: Retains EXIF data (orientation, camera settings, GPS optionally).
+          - **100% Offline & Private**: Zero network permissions requested or used.
+
+          ### Download & Verification
+          - Download \`clipmark-${TAG_NAME}.apk\` below and sideload on Android 10+ (API 29+).
+          - Verify checksum:
+          \`\`\`bash
+          sha256sum -c checksums.txt
+          \`\`\`
+
+          **Full Changelog**: https://github.com/${{ github.repository }}/commits/${TAG_NAME}
+          EOF
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TAG_NAME="${GITHUB_REF_NAME}"
+          gh release create "${TAG_NAME}" \
+            --title "ClipMark ${TAG_NAME}" \
+            --notes-file release-notes.md \
+            "build/dist/clipmark-${TAG_NAME}.apk" \
+            "build/dist/checksums.txt"
